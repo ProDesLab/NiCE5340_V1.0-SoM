@@ -1,5 +1,9 @@
-![alt text](https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/NiCE5340%20header%20logo%20w.jpg)
-<center><img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/1714388781094.jpg" width="400">
+<p align="center">
+<img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/NiCE5340%20header%20logo%20w.jpg" width="600">
+</p>
+<p align="center">
+<img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/1714388781094.jpg" width="400">
+</p>
 
 ## What is NiCE5340 ?
 NiCE5340 SoM is the combination of the capabilities of two devices: a microcontroller and an FPGA.

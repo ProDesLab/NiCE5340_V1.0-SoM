@@ -1,8 +1,11 @@
 <p align="center">
-<img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/NiCE5340%20header%20logo%20w.jpg" width="600">
+<img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/NiCE5340%20header%20logo%20w.jpg" width="500">
 </p>
 <p align="center">
 <img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/1714388781094.jpg" width="400">
+</p>
+<p align="center">
+<img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/NiCE5340%20Block%20Diagram.jpg" width="400">
 </p>
 
 ## What is NiCE5340 ?

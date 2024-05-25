@@ -45,6 +45,33 @@
 		watchdog0 = &wdt0;
 		spi-flash0 = &at25ql64;
 	};
+
+	regs_fpga: regs_fpga {
+		compatible = "regulator-fixed";
+		regulator-name = "fpga";
+		regulator-min-microvolt = <1200000>;
+		regulator-max-microvolt = <1200000>;
+		enable-gpios = <&gpio1 1 GPIO_ACTIVE_HIGH>;
+		regulator-boot-on;
+	};
+
+	peripheral_en: peripheral_en {
+		compatible = "regulator-fixed";
+		regulator-name = "peripheral_en";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		enable-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
+		regulator-boot-on;
+	};
+
+	i2c_en: i2c_en {
+		compatible = "regulator-fixed";
+		regulator-name = "i2c_en";
+		regulator-min-microvolt = <1800000>;
+		regulator-max-microvolt = <1800000>;
+		enable-gpios = <&gpio0 24 GPIO_ACTIVE_HIGH>;
+		regulator-boot-on;
+	};
 };
 
 &adc {
@@ -69,6 +96,36 @@
 	pinctrl-0 = <&i2c0_default>;
 	pinctrl-1 = <&i2c0_sleep>;
 	pinctrl-names = "default", "sleep";
+
+	vbat_sensor: ina231@40 {
+		compatible = "ti,ina230";
+		reg = <0x40>;
+		adc-mode = "Bus and shunt voltage continuous";
+		vbus-conversion-time-us = <4156>;
+		vshunt-conversion-time-us = <4156>;
+		avg-count = <1024>;
+		current-lsb-microamps = <1>;
+		rshunt-micro-ohms = <100000>;
+		alert-gpios = <&gpio1 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
+
+	accel: lsm6dsm@6a {
+		compatible = "st,lsm6dsm", "st,lsm6dsl";
+		reg = <0x6a>;
+		irq-gpios = <&gpio0 19 GPIO_ACTIVE_HIGH>;
+	};
+
+	humidity_temp_sensor: shtc3@70 {
+		compatible = "sensirion,shtcx";
+		reg = <0x70>;
+		chip = "shtc3";
+		measure-mode = "normal";
+	};
+
+	pressure_sensor: dps310@77 {
+		compatible = "infineon,dps310";
+		reg = <0x77>;
+	};
 };
 
 &qspi {
@@ -79,9 +136,7 @@
 	at25ql64: at25ql641@0 {
 		compatible = "nordic,qspi-nor";
 		reg = <0>;
-		/* MX25R64 supports only pp and pp4io */
 		writeoc = "pp4io";
-		/* MX25R64 supports all readoc options */
 		readoc = "read4io";
 		sck-frequency = <8000000>;
 		jedec-id = [c2 28 17];

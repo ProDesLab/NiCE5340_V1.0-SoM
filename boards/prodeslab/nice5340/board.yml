@@ -1,0 +1,8 @@
+board:
+  name: nice5340
+  vendor: prodeslab
+  socs:
+  - name: 'nrf5340'
+    variants:
+    - name: 'ns'
+      cpucluster: 'cpuapp'

@@ -1,4 +1,0 @@
-name: NiCE5340
-build:
-  settings:
-    board_root: .

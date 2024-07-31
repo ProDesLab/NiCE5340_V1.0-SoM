@@ -1,5 +1,5 @@
 board:
-  name: nice5340
+  name: nice5340_dk
   vendor: prodeslab
   socs:
   - name: 'nrf5340'

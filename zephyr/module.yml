@@ -1,0 +1,5 @@
+build:
+  settings:
+    board_root: Firmware
+
+name: nice5340 

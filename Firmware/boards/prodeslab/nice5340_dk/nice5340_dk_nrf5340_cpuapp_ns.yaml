@@ -1,5 +1,5 @@
-identifier: nice5340/nrf5340/cpuapp/ns
-name: NICE5340-NRF5340-application-MCU-Non-Secure
+identifier: nice5340_dk/nrf5340/cpuapp/ns
+name: NICE5340-DK-NRF5340-application-MCU-Non-Secure
 type: mcu
 arch: arm
 toolchain:
@@ -17,4 +17,4 @@ supported:
   - netif:openthread
   - gpio
   - spi
-vendor: prodeslab 
+vendor: prodeslab

@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-#include "nrf5340_cpuapp_common-pinctrl.dtsi"
+#include "nice5340_dk_nrf5340_cpuapp_common-pinctrl.dtsi"
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
@@ -116,9 +116,8 @@
 	};
 
 	humidity_temp_sensor: shtc3@70 {
-		compatible = "sensirion,shtcx";
+		compatible = "sensirion,shtc3";
 		reg = <0x70>;
-		chip = "shtc3";
 		measure-mode = "normal";
 	};
 
@@ -151,6 +150,15 @@
 		t-enter-dpd = <10000>;
 		t-exit-dpd = <35000>;
 	};
+	// iCE40 is also on QSPI pins, unsure of ability to handle.
+};
+
+dmic_dev: &pdm0 {
+	status = "okay";
+	pinctrl-0 = <&pdm0_default>;
+	pinctrl-1 = <&pdm0_sleep>;
+	pinctrl-names = "default", "sleep";
+	clock-source = "PCLK32M_HFXO";
 };
 
 &flash0 {
@@ -218,4 +226,4 @@ zephyr_udc0: &usbd {
 };
 
 /* Include partition configuration file */
-#include "nrf5340_cpuapp_partition_conf.dtsi"
+#include "nice5340_dk_nrf5340_cpuapp_partition_conf.dtsi"

@@ -6,12 +6,12 @@
 
 /dts-v1/;
 #include <nordic/nrf5340_cpunet_qkaa.dtsi>
-#include "nice5340_nrf5340_cpunet-pinctrl.dtsi"
+#include "nice5340_dk_nrf5340_cpunet-pinctrl.dtsi"
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
 	model = "ProDesLab NiCE5340 NRF5340 Network";
-	compatible = "prodeslab,nice5340-nrf5340-cpunet";
+	compatible = "prodeslab,nice5340-dk-nrf5340-cpunet";
 
 	chosen {
 		/*
@@ -93,4 +93,4 @@
 };
 
 /* Include shared RAM configuration file */
-#include "nrf5340_shared_sram_planning_conf.dtsi"
+#include "nice5340_dk_nrf5340_shared_sram_planning_conf.dtsi"

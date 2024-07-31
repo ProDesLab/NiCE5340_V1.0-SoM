@@ -6,11 +6,11 @@
 
 /dts-v1/;
 #include <nordic/nrf5340_cpuapp_qkaa.dtsi>
-#include "nrf5340_cpuapp_common.dtsi"
+#include "nice5340_dk_nrf5340_cpuapp_common.dtsi"
 
 / {
-	model = "ProDesLab NiCE5340 NRF5340 Application";
-	compatible = "prodeslab,nice5340-nrf5340-cpuapp";
+	model = "ProDesLab NiCE5340-DK NRF5340 Application";
+	compatible = "prodeslab,nice5340-dk-nrf5340-cpuapp";
 
 	chosen {
 		zephyr,sram = &sram0_image;

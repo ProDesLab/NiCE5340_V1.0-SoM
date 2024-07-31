@@ -19,6 +19,21 @@
 		};
 	};
 
+	pdm0_default: pdm0_default {
+		group1 {
+			psels = <NRF_PSEL(PDM_CLK, 1, 9)>,
+				<NRF_PSEL(PDM_DIN, 0, 27)>;
+		};
+	};
+
+	pdm0_sleep: pdm0_sleep {
+		group1 {
+			psels = <NRF_PSEL(PDM_CLK, 1, 9)>,
+				<NRF_PSEL(PDM_DIN, 0, 27)>;
+			low-power-enable;
+		};
+	};
+
 	qspi_default: qspi_default {
 		group1 {
 			psels = <NRF_PSEL(QSPI_SCK, 0, 17)>,

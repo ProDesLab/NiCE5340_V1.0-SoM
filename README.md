@@ -8,6 +8,16 @@
 <img src="https://github.com/ProDesLab/NiCE5340_V1.0-SoM/blob/main/Media/NiCE5340%20Block%20Diagram.jpg" width="400">
 </p>
 
+I had been wondering for some time what would be the result of combining a powerful low-power MCU with a versatile low-power FPGA. <br />
+I could not find anything around that satisfied me, so I decided to make it myself. <br />
+Curiosity drove me to design something as small as possible with as many devices on board as possible. <br />
+The type of components used falls into the category for developing low-power IoT applications or wearable devices. <br />
+So it is with pride that I present a small SoM with an MCU from Nordic Semiconductor at its center: nRF5340. <br />
+Accompanying it is a little gem from Lattice Semiconductor, the well-known: iCE40 Ultra Plus <br />
+Needing to choose a name for this project, I thought of combining the two part numbers, and so  <br />
+it is with real pleasure that I present it to you: 𝗡𝗶𝗖𝗘𝟱𝟯𝟰𝟬 <br />
+Really “nice” isn't it ? <br />
+
 ## What is NiCE5340 ?
 NiCE5340 SoM is the combination of the capabilities of two devices: a microcontroller and an FPGA. <br />
 In this case, it is a Nordic **nRF5340** MCU and a Lattice **iCE40** FPGA. <br />
@@ -25,7 +35,7 @@ Various sensors, devices and peripherals have been integrated on board, such as:
  - Haptic Driver - **DRV2605LYZF** (Texas)
  - RGB IR Colour Sensor - **BH1749NUC-E2** (Rohm)
  - Barometric Pressure Sensor - **DPS310XTSA1** (Infineon)
- - Charge/Discharge Current Measurement - **INA231AIYFDT** (Texas)
+ - Discharge Current Measurement - **INA231AIYFDT** (Texas)
  - RTC - **MAX31342EWA+T** (Analog)
 
 As can be seen in the block diagram and schematic, all peripherals share the same I2C bus. <br />

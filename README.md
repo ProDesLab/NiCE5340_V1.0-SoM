@@ -44,3 +44,7 @@ All peripheral devices connected to the 1V8 rail can be switched off completely 
 The FPGA package used does not have very many pins, but the two available banks have already been configured to run at 1V8 or 3V3 on the GPIO. <br />
 A chip antenna and an **MHF4** connector for external connection were also integrated on the module. <br />
 There is also on-board ESD protection for the USB bus. <br />
+
+NOTE: <br />
+I did this work to exercise deliberate practice, to improve my design skills and to push my miniaturisation skills further. <br />
+(not really true, I have done more complicated in the past but I wasn't the one paying the bills) <br />
